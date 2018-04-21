@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'kimberley';
+  src: local('kimberley'), url('../fonts/kimberley-bl.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BankGothic Md BT';
+  src: local('BankGothic Md BT'), url('../fonts/bankgthd.ttf') format('truetype');
+}
+
+
+body {
+  background: black;
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.squad-item-container {
+  /*width: 470px;*/
+  max-width: 600px;
+  background: #212121;
+  border-radius: 0.6em;
+  margin: 0.7em;
+  padding: 0.7em;
+  overflow: hidden;
+  text-shadow: 0 0 30px black, 0 0 20px black, 0 0 10px black, 0 0 5px black;
+}
+
+.pilot-container {
+  float: left;
+  text-align: center;
+}
+.ship-type-icon {
+  font-size: 2em;
+  line-height: 1em;
+}
+.pilot-skill {
+  color: #F57F20;
+  font-family: "kimberley";
+  font-size: 2.5em;
+}
+.pilot-tier img {
+  width: 1.7em;
+  height: 1.7em;
+}
+
+.points-container {
+  float: right;
+}
+.faction {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  float: right;
+  margin-left: 0.5em;
+}
+.points {
+  font-family: "kimberley";
+  font-size: 1.5em;
+  float: right;
+}
+
+.id-container {
+  font-family: "BankGothic Md BT";
+  font-size: 1.7em;
+  line-height: 1.3em;
+  margin-left: 2em;
+}
+.unique:before {
+  font-size: 0.7em;
+  content: "•";
+}
+
+.stat {
+  display: inline-block;
+}
+
+.stats-container {
+  float: left;
+  font-family: "kimberley";
+  font-size: 1.5em;
+  text-shadow: 0 0 30px black, 0 0 20px black, 0 0 10px black, 0 0 5px black;
+  margin: 0.5em 0 0.3em 0;
+}
+.stat {
+  margin: 0 0.3em;
+}
+.stat.attack {
+  color: #EF1A42;
+}
+.stat.agility {
+  color: #5BA339;
+}
+.stat.hull {
+  color: #FFF417;
+}
+.stat.shield {
+  color: #64EFFC;
+}
+.stat i {
+  font-size: inherit;
+  position: relative;
+  top: -0.15em;
+  margin-right: 0.5em;
+}
+
+.action-container {
+  float: right;
+  clear: right;
+  color: #5BA339;
+  margin-top: 0.2em;
+}
+.minified .action-container {
+  /*margin-top: 0;*/
+}
+.action {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+.action i {
+  font-size: 1.7em;
+}
+
+.pilot-ability-container {
+  clear: both;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  text-align: center;
+  background: #3E3E3E;
+  border-radius: 0.5em;
+}
+.no-pilot .pilot-ability-container {
+  padding: 0;
+}
+
+.upgrades-container {
+  float: left;
+  vertical-align: middle;
+}
+.upgrade i {
+  font-size: 1.8em;
+  line-height: 1.3em;
+}
+.upgrade span.name {
+  margin-left: 0.7em;
+  position: relative;
+  top: -0.3em;
+}
+.upgrade.filled i,
+.upgrade.empty span.name {
+  color: #707070;
+}
+.upgrade.filled span.name,
+.upgrade.empty i {
+  color: white;
+}
+.minified .upgrades-container {
+  float: right;
+  clear: both;
+}
+.minified .upgrade {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+.minified .upgrade span {
+  display: none;
+}
+
+.manoevers-container {
+  background: #3E3E3E;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  float: right;
+}
+.manoevers th {
+  font-weight: normal;
+  padding-right: 0.15em;
+}
+.manoevers td {
+  padding: 0 0.15em;
+}
+.manoevers i {
+  font-size: inherit;
+}
+.manoevers .green {
+  color: #66BE22;
+}
+.manoevers .red {
+  color: #FF1F00;
+}
