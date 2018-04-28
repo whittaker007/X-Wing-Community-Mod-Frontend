@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'kimberley';
+  src: local('kimberley'), url('../fonts/kimberley-bl.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BankGothic Md BT';
+  src: local('BankGothic Md BT'), url('../fonts/bankgthd.ttf') format('truetype');
+}
+
+
+body {
+  background: black;
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.squad-item-container {
+  position: relative;
+  /*width: 470px;*/
+  max-width: 600px;
+  height: 23em;
+  background: #212121;
+  border-radius: 0.6em;
+  margin: 0.7em;
+  padding: 0.7em;
+  overflow: auto;
+  text-shadow: 0 0 30px black, 0 0 20px black, 0 0 10px black, 0 0 5px black;
+}
+
+.unique:before {
+  font-size: 0.7em;
+  content: "•";
+}
+
+.pilot-container {}
+.pilot-skill {
+  position: absolute;
+  left: 0.4em;
+  top: 0.9em;
+  color: #F57F20;
+  font-family: "kimberley";
+  font-size: 2.5em;
+}
+.pilot-tier {
+  position: absolute;
+  left: 1em;
+  top: 5.7em;
+}
+.pilot-tier img {
+  width: 1.7em;
+  height: 1.7em;
+}
+.pilot-name {
+  position: absolute;
+  left: 2.5em;
+  top: 1.8em;
+  font-family: "BankGothic Md BT";
+  font-size: 1.7em;
+  line-height: 1.3em;
+}
+.pilot-ability-container {
+  position: relative;
+  top: 7.5em;
+  padding: 0.5em;
+  text-align: center;
+  background: #3E3E3E;
+  border-radius: 0.5em;
+}
+.no-pilot .pilot-ability-container {
+  padding: 0;
+}
+
+.ship-container {}
+
+.points-container {
+  position: absolute;
+  right: 0.4em;
+  top: 0.4em;
+}
+.faction {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  float: right;
+  margin-left: 0.5em;
+}
+.points {
+  font-family: "kimberley";
+  font-size: 1.5em;
+  float: right;
+}
+
+.ship-type {
+  position: absolute;
+  left: 2.5em;
+  top: 0.4em;
+  font-family: "BankGothic Md BT";
+  font-size: 1.7em;
+  line-height: 1.3em;
+}
+.ship-type-icon {
+  position: absolute;
+  left: 0.4em;
+  top: 0.4em;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.upgrades-container {
+  position: absolute;
+  top: 11em;
+}
+.upgrade i {
+  font-size: 1.8em;
+  line-height: 1.3em;
+}
+.upgrade .upgrade-name {
+  position: relative;
+  margin-left: 0.7em;
+  top: -0.3em;
+}
+.upgrade.filled i,
+.upgrade.empty .upgrade-name {
+  color: #707070;
+}
+.upgrade.filled .upgrade-name,
+.upgrade.empty i {
+  color: white;
+}
+.minified .upgrades-container {
+  position: absolute;
+  top: 3em;
+  right: 0.4em;
+}
+.minified .upgrade {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+.minified .upgrade span {
+  display: none;
+}
+
+.stats-container {
+  position: absolute;
+  left: 2em;
+  top: 3.2em;
+  font-family: "kimberley";
+  font-size: 1.5em;
+  text-shadow: 0 0 30px black, 0 0 20px black, 0 0 10px black, 0 0 5px black;
+  margin: 0.5em 0 0.3em 0;
+}
+.stat {
+  display: inline-block;
+  margin: 0 0.3em;
+}
+.stat.attack {
+  color: #EF1A42;
+}
+.stat.agility {
+  color: #5BA339;
+}
+.stat.hull {
+  color: #FFF417;
+}
+.stat.shield {
+  color: #64EFFC;
+}
+.stat i {
+  font-size: inherit;
+  position: relative;
+  top: -0.15em;
+  margin-right: 0.5em;
+}
+
+.action-container {
+  position: absolute;
+  right: 0.5em;
+  top: 5em;
+  float: right;
+  clear: right;
+  color: #5BA339;
+  margin-top: 0.2em;
+}
+.minified .action-container {}
+.action {
+  display: inline-block;
+  margin-left: 0.7em;
+}
+.action i {
+  font-size: 1.7em;
+}
+
+.manoevers-container {
+  position: absolute;
+  right: 0.7em;
+  top: 11.5em;
+  background: #3E3E3E;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+.manoevers th {
+  font-weight: normal;
+  padding-right: 0.15em;
+}
+.manoevers td {
+  padding: 0 0.15em;
+}
+.manoevers i {
+  font-size: inherit;
+}
+.manoevers .green {
+  color: #66BE22;
+}
+.manoevers .red {
+  color: #FF1F00;
+}

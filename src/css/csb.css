@@ -17,15 +17,33 @@ body {
   font-size: 14px;
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; } /* IE < 8 */
+
+
+.squad-container {}
 .squad-item-container {
   /*width: 470px;*/
-  max-width: 600px;
+  max-width: 800px;
   background: #212121;
   border-radius: 0.6em;
-  margin: 0.7em;
+  margin: 0.7em auto;
   padding: 0.7em;
-  overflow: hidden;
+  /*overflow: hidden;*/
   text-shadow: 0 0 30px black, 0 0 20px black, 0 0 10px black, 0 0 5px black;
+  text-align: left;
+}
+
+.unique:before {
+  font-size: 0.7em;
+  content: "•";
 }
 
 .pilot-container {
@@ -48,6 +66,10 @@ body {
 
 .points-container {
   float: right;
+  text-align: right;
+}
+.minified .points-container > div {
+  float: right;
 }
 .faction {
   font-size: 1.5em;
@@ -63,68 +85,65 @@ body {
 
 .id-container {
   font-family: "BankGothic Md BT";
-  font-size: 1.7em;
+  font-size: 1.6em;
+  white-space: nowrap;
   line-height: 1.3em;
   margin-left: 2em;
 }
-.unique:before {
-  font-size: 0.7em;
-  content: "•";
-}
-
-.stat {
-  display: inline-block;
+.pilot {
+  margin-top: 0.2em;
 }
 
 .stats-container {
   float: left;
   font-family: "kimberley";
-  font-size: 1.5em;
   text-shadow: 0 0 30px black, 0 0 20px black, 0 0 10px black, 0 0 5px black;
-  margin: 0.5em 0 0.3em 0;
+  margin-top: 0.6em;
 }
 .stat {
-  margin: 0 0.3em;
+  font-size: 1.5em;
+  display: inline-block;
+  margin: 0 0.2em;
 }
-.stat.attack {
+.stat.attack * {
   color: #EF1A42;
 }
-.stat.agility {
+.stat.agility * {
   color: #5BA339;
 }
-.stat.hull {
+.stat.hull * {
   color: #FFF417;
 }
-.stat.shield {
+.stat.shield * {
   color: #64EFFC;
 }
 .stat i {
   font-size: inherit;
   position: relative;
   top: -0.15em;
-  margin-right: 0.5em;
+  margin-right: 0.2em;
 }
 
 .action-container {
   float: right;
   clear: right;
-  color: #5BA339;
-  margin-top: 0.2em;
+  margin-top: 0.7em;
 }
 .minified .action-container {
-  /*margin-top: 0;*/
+  margin-top: 0.4em;
 }
 .action {
   display: inline-block;
   margin-left: 0.5em;
 }
 .action i {
+  color: #5BA339;
   font-size: 1.7em;
 }
 
 .pilot-ability-container {
   clear: both;
-  margin: 0.5em 0;
+  margin: 3em 0 0.5em 0;
   padding: 0.5em;
   text-align: center;
   background: #3E3E3E;
@@ -156,8 +175,8 @@ body {
   color: white;
 }
 .minified .upgrades-container {
-  float: right;
   clear: both;
+  margin-top: 0.5em;
 }
 .minified .upgrade {
   display: inline-block;
@@ -188,4 +207,31 @@ body {
 }
 .manoevers .red {
   color: #FF1F00;
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .pilot-container,
+  .points-container {
+    font-size: 0.9em;
+  }
+  .id-container {
+    font-size: 1.4em;
+  }
+  .stat i {
+    display: none;
+  }
+
+  .manoevers-container {
+    display: none;
+  }
 }
