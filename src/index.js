@@ -27,6 +27,7 @@ const xwtt = {
     lineHeight: '0.4rem',
     fontFamily: 'Helvetica, Arial, "Lucida Grande", sans-serif',
     background: '#3E3E3E',
+    whiteSpace: 'normal',
   },
   arrow: {
     bottom: '-0.4rem',
@@ -89,30 +90,51 @@ const App = () => (
         <div className="ship-container">
           <div className="stats-container">
             <div className="stat attack">
-              <i className="xwing-miniatures-font xwing-miniatures-font-attack"></i><span>2</span>
+              <Tooltip content="Attack" styles={xwtt}>
+                <i className="xwing-miniatures-font xwing-miniatures-font-attack"></i><span>2</span>
+              </Tooltip>
             </div>
             <div className="stat agility">
-              <i className="xwing-miniatures-font xwing-miniatures-font-agility"></i><span>3</span>
+              <Tooltip content="Agility" styles={xwtt}>
+                <i className="xwing-miniatures-font xwing-miniatures-font-agility"></i><span>3</span>
+              </Tooltip>
             </div>
             <div className="stat hull">
-              <i className="xwing-miniatures-font xwing-miniatures-font-hull"></i><span>3</span>
+              <Tooltip content="Hull" styles={xwtt}>
+                <i className="xwing-miniatures-font xwing-miniatures-font-hull"></i><span>3</span>
+              </Tooltip>
             </div>
             <div className="stat shield">
-              <i className="xwing-miniatures-font xwing-miniatures-font-shield"></i><span>2</span>
+              <Tooltip content="Shields" styles={xwtt}>
+                <i className="xwing-miniatures-font xwing-miniatures-font-shield"></i><span>2</span>
+              </Tooltip>
             </div>
           </div>
           <div className="action-container">
             <div className="action focus">
-              <i className="xwing-miniatures-font xwing-miniatures-font-focus"></i>
+              <Tooltip content="Focus" styles={xwtt}>
+                <i className="xwing-miniatures-font xwing-miniatures-font-focus"></i>
+              </Tooltip>
             </div>
             <div className="action targetlock">
-              <i className="xwing-miniatures-font xwing-miniatures-font-targetlock"></i>
+              <Tooltip content="Target lock" styles={xwtt}>
+                <i className="xwing-miniatures-font xwing-miniatures-font-targetlock"></i>
+              </Tooltip>
             </div>
             <div className="action barrelroll">
-              <i className="xwing-miniatures-font xwing-miniatures-font-barrelroll"></i>
+              <Tooltip content="Barrel roll" styles={xwtt}>
+                <i className="xwing-miniatures-font xwing-miniatures-font-barrelroll"></i>
+              </Tooltip>
             </div>
             <div className="action evade">
-              <i className="xwing-miniatures-font xwing-miniatures-font-evade"></i>
+              <Tooltip content="Evade" styles={xwtt}>
+                <i className="xwing-miniatures-font xwing-miniatures-font-evade"></i>
+              </Tooltip>
+            </div>
+            <div className="action boost">
+              <Tooltip content="Boost" styles={xwtt}>
+                <i className="xwing-miniatures-font xwing-miniatures-font-boost"></i>
+              </Tooltip>
             </div>
           </div>
         </div>
